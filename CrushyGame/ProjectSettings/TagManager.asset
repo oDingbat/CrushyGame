@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Block
+  - New tag
+  - TextDictionary
+  - Monster
+  - MonsterEye
+  - GameManager
+  - Item
+  - ScoreCounter
+  - AudioManager
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Environment
+  - Player
+  - PlayerPhysics
+  - Ragdoll
+  - RagdollDetail
+  - Platform
+  - Item
+  - MouthWall
+  - Entity
+  - Projectile
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - VirtualScreen
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Teeth
+    uniqueID: 3926046169
+    locked: 0
