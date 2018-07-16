@@ -164,6 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   trailRenderer: {fileID: 0}
-  stepDistance: 0.5
-  stepRandomness: 0.125
-  stepAngle: 120
+  stepDistance: 0.75
+  stepRandomness: 0.25
+  stepAngle: 150

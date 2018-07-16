@@ -106,6 +106,7 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Coffee
+    color: {r: 0.4784314, g: 0.26666668, b: 0.2901961, a: 1}
     animController: {fileID: 9100000, guid: f15bc4bd8096244459355d20cbbe5c6a, type: 2}
     attributes:
       speed: 1

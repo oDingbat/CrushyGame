@@ -106,6 +106,7 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Donut
+    color: {r: 0.4784314, g: 0.26666668, b: 0.2901961, a: 1}
     animController: {fileID: 9100000, guid: 243650a03dba9ce459783fac49b54b95, type: 2}
     attributes:
       speed: 0

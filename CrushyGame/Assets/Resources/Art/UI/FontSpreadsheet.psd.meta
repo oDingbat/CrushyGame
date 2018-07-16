@@ -45,7 +45,7 @@ TextureImporter:
     21300080: '-'
     21300082: _
   externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 6
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -73,7 +75,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -729,7 +731,7 @@ TextureImporter:
         serializedVersion: 2
         x: 28
         y: 231
-        width: 8
+        width: 7
         height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -747,7 +749,7 @@ TextureImporter:
       name: 5
       rect:
         serializedVersion: 2
-        x: 36
+        x: 35
         y: 231
         width: 7
         height: 12
@@ -767,7 +769,7 @@ TextureImporter:
       name: 6
       rect:
         serializedVersion: 2
-        x: 43
+        x: 42
         y: 231
         width: 7
         height: 12
@@ -787,7 +789,7 @@ TextureImporter:
       name: 7
       rect:
         serializedVersion: 2
-        x: 50
+        x: 49
         y: 231
         width: 7
         height: 12
@@ -807,7 +809,7 @@ TextureImporter:
       name: 8
       rect:
         serializedVersion: 2
-        x: 57
+        x: 56
         y: 231
         width: 7
         height: 12
@@ -827,7 +829,7 @@ TextureImporter:
       name: 9
       rect:
         serializedVersion: 2
-        x: 64
+        x: 63
         y: 231
         width: 7
         height: 12

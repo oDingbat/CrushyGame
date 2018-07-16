@@ -106,6 +106,7 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Skull
+    color: {r: 0.48627454, g: 0.19215688, b: 0.38823533, a: 1}
     animController: {fileID: 9100000, guid: 68ee992141a1e92489bab0e3046e2f15, type: 2}
     attributes:
       speed: 0

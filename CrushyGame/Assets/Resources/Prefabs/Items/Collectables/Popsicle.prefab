@@ -106,6 +106,7 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Popsicle
+    color: {r: 0.72156864, g: 0.3372549, b: 0.49803925, a: 1}
     animController: {fileID: 9100000, guid: a10e3a8b0ce0a5d4bbf2dc3ebf03ca9f, type: 2}
     attributes:
       speed: 0

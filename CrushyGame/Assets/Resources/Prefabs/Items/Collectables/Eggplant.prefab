@@ -77,7 +77,7 @@ Animator:
   m_GameObject: {fileID: 1256000785331882}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 243650a03dba9ce459783fac49b54b95, type: 2}
+  m_Controller: {fileID: 9100000, guid: 07b1cde7c7f244548b44faa4b4d886db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,8 +105,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 33024
   item:
-    name: Donut
-    animController: {fileID: 9100000, guid: 243650a03dba9ce459783fac49b54b95, type: 2}
+    name: Eggplant
+    animController: {fileID: 9100000, guid: 07b1cde7c7f244548b44faa4b4d886db, type: 2}
     attributes:
       speed: 0
       acceleration: 0

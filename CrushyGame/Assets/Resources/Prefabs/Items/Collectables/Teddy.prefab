@@ -106,6 +106,7 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Teddy
+    color: {r: 0.627451, g: 0.35686275, b: 0.3254902, a: 1}
     animController: {fileID: 9100000, guid: f6b5ecb69ddc8ee41b49299557cdab41, type: 2}
     attributes:
       speed: 0

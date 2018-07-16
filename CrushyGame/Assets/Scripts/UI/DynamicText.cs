@@ -12,11 +12,13 @@ public class DynamicText : MonoBehaviour {
 	[Space (10)][Header ("Text Settings")]
 	public Color textColor;
 	public Color borderColor;
+	public bool useBorder;
 	public string text;
 	public TextAlignment textAlignment;
 	public int textSortingOrder = 499;
 
 	float pixelUnit = (1f / 12f);
+	int pixelWidth;
 	GameObject prefab_Letter;
 	string textCurrent;
 	
@@ -30,6 +32,11 @@ public class DynamicText : MonoBehaviour {
 		}
 	}
 
+	public void SetText (string newText, Color newTextColor) {
+		textColor = newTextColor;
+		SetText(newText);
+	}
+
 	public void SetText (string newText) {
 		text = newText;
 		if (textCurrent != text) {
@@ -37,6 +44,8 @@ public class DynamicText : MonoBehaviour {
 			if (prefab_Letter == null) {
 				prefab_Letter = Resources.Load("Prefabs/UI/Letter", typeof(GameObject)) as GameObject;
 			}
+
+			textContainer = transform.Find("[TextContainer]");
 
 			// Get text Dictionary
 			textDictionary = GameObject.FindGameObjectWithTag("TextDictionary").GetComponent<TextDictionary>();
@@ -68,7 +77,9 @@ public class DynamicText : MonoBehaviour {
 				}
 			}
 
-			for (int i = 0; i < 5; i++) {
+			int copyCount = (useBorder == true ? 5 : 2);
+
+			for (int i = 0; i < copyCount; i++) {
 				float widthCurrent = 0;
 				foreach (Sprite textSprite in textSprites) {
 					GameObject newLetter = (GameObject)Instantiate(prefab_Letter, transform.position, Quaternion.identity, textContainer);
@@ -76,16 +87,17 @@ public class DynamicText : MonoBehaviour {
 					SpriteRenderer newLetterRenderer = newLetter.GetComponent<SpriteRenderer>();
 					newLetterRenderer.sprite = textSprite;
 					widthCurrent += (textSprite.textureRect.width / 12) - pixelUnit;
+					pixelWidth += (int)(textSprite.textureRect.width) + (i != 0 ? 1 : 0);
 					newLetterRenderer.color = (i == 0 ? textColor : borderColor);
 
 					if (i > 0) {    // Border
 						Vector2 borderOffset = Vector2.zero;
 						switch (i) {
 							case (1):
-								borderOffset = Vector2.up * pixelUnit;
+								borderOffset = Vector2.up * -pixelUnit;
 								break;
 							case (2):
-								borderOffset = Vector2.up * -pixelUnit;
+								borderOffset = Vector2.up * pixelUnit;
 								break;
 							case (3):
 								borderOffset = Vector2.right * pixelUnit;
@@ -106,6 +118,12 @@ public class DynamicText : MonoBehaviour {
 			// Set textCurrent
 			textCurrent = text;
 		}
+	}
+
+	public void FixTextContainerPosition () {
+		float pixelUnit = 12f;
+		float oddPixelOffset = (pixelWidth % 2 != 1) ? (1f / 24f) : 0;
+		textContainer.transform.position = new Vector3((Mathf.Round(transform.position.x * pixelUnit) / pixelUnit) + oddPixelOffset, Mathf.Round(transform.position.y * pixelUnit) / pixelUnit);
 	}
 
 }

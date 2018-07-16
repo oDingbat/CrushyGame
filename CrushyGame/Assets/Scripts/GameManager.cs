@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour {
 	int coins;
 	
 	[Space (10)][Header ("Prefabs")]
+	public GameObject prefab_textFloater;
 	public GameObject prefab_ItemImage;
 	public GameObject prefab_HeartImage;
 	public GameObject prefab_CursedHeartImage;
@@ -89,6 +90,10 @@ public class GameManager : MonoBehaviour {
 		player.attributesCombined.ClampValues();
 
 		if (item.isCollectable == true) {
+			// Create textFloater
+			TextFloater newTextFloater = Instantiate(prefab_textFloater, player.transform.position, Quaternion.identity).GetComponent<TextFloater>();
+			newTextFloater.SetText(item.name.ToLower());
+
 			// Create new item collected image
 			Vector3 offset = new Vector3(3, -0.75f * itemsCollected.Count);
 			GameObject newItemCollectedImage = Instantiate(prefab_ItemImage, itemCollectionContainer.transform.position + offset, Quaternion.identity, itemCollectionContainer);

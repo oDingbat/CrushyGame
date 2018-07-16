@@ -106,6 +106,7 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Magnet
+    color: {r: 0.7843138, g: 0.29411766, b: 0.22352943, a: 1}
     animController: {fileID: 9100000, guid: 00ad7828ab508734d838537c2fc1171e, type: 2}
     attributes:
       speed: 0

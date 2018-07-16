@@ -106,6 +106,7 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Clover
+    color: {r: 0.61960787, g: 0.8431373, b: 0.23529413, a: 1}
     animController: {fileID: 9100000, guid: af72a9f9a5874a04e9a0cd02eb90a4b6, type: 2}
     attributes:
       speed: 0

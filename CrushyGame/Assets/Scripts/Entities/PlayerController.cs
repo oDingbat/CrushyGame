@@ -136,18 +136,18 @@ public class PlayerController : Entity {
 	private void UpdateInput() {
 		if (isEnabled) {
 			// Movement
-			bool left = Input.GetKey(controlScheme.left) || Input.GetKey(controlScheme.leftAlt);
-			bool right = Input.GetKey(controlScheme.right) || Input.GetKey(controlScheme.rightAlt);
+			bool left = Input.GetKey(controlScheme.left) || Input.GetKey(controlScheme.leftAlt) || (Input.GetAxis("G_Horizontal") < -0.01f ? true : false);
+			bool right = Input.GetKey(controlScheme.right) || Input.GetKey(controlScheme.rightAlt) || (Input.GetAxis("G_Horizontal") > 0.01f ? true : false);
 			inputMovement = (left != right) ? (left ? -1 : 1) : 0;
 
 			// Jumping
-			bool jump = Input.GetKeyDown(controlScheme.jump) || Input.GetKeyDown(controlScheme.jumpAlt);
+			bool jump = Input.GetKeyDown(controlScheme.jump) || Input.GetKeyDown(controlScheme.jumpAlt) || Input.GetButtonDown("G_Jump") ? true : false;
 			if (jump) {
 				timeLastPressedJump = Time.time;
 			}
 
 			// Platform Dropping
-			bool down = Input.GetKeyDown(controlScheme.down) || Input.GetKeyDown(controlScheme.downAlt);
+			bool down = Input.GetKeyDown(controlScheme.down) || Input.GetKeyDown(controlScheme.downAlt) || (Input.GetAxis("G_Vertical") < -0.01f ? true : false);
 			if (down) {
 				AttemptDropDown();
 			}
@@ -163,7 +163,7 @@ public class PlayerController : Entity {
 		}
 
 		// Suiciding
-		if (Input.GetKeyDown(controlScheme.suicide)) {
+		if (Input.GetKeyDown(controlScheme.suicide) || Input.GetButtonDown("G_Suicide") ? true : false) {
 			if (isDead == false) {
 				Die();
 			}

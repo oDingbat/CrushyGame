@@ -106,6 +106,7 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Medkit
+    color: {r: 0.7843138, g: 0.29411766, b: 0.22352943, a: 1}
     animController: {fileID: 9100000, guid: 959ae7f3df7ac5e4883ca43d597a520b, type: 2}
     attributes:
       speed: 0
