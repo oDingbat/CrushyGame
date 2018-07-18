@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour {
 		restingPosition = transform.position;
 		desiredPosition = restingPosition;
 
-		//GameObject.FindGameObjectWithTag("Monster").GetComponent<MonsterController>().EventTeethSlam += AddScreenshake;
+		GameObject.FindGameObjectWithTag("Monster").GetComponent<MonsterController>().EventTeethSlam += AddScreenshake;
 	}
 
 	private void Update () {

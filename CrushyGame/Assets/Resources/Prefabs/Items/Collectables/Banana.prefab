@@ -77,7 +77,7 @@ Animator:
   m_GameObject: {fileID: 1120613894833888}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 243650a03dba9ce459783fac49b54b95, type: 2}
+  m_Controller: {fileID: 9100000, guid: 70b54a47285fa204c9bb6f08e87d751e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,9 +105,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 33024
   item:
-    name: Donut
-    color: {r: 0.9254902, g: 0.7019608, b: 0.16862746, a: 1}
-    animController: {fileID: 9100000, guid: 243650a03dba9ce459783fac49b54b95, type: 2}
+    name: Banana
+    animController: {fileID: 9100000, guid: 70b54a47285fa204c9bb6f08e87d751e, type: 2}
     attributes:
       speed: 0
       acceleration: 0

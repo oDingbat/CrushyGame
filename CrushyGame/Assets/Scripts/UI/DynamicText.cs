@@ -12,7 +12,7 @@ public class DynamicText : MonoBehaviour {
 	[Space (10)][Header ("Text Settings")]
 	public Color textColor;
 	public Color borderColor;
-	public bool useBorder;
+	public int textCount;
 	public string text;
 	public TextAlignment textAlignment;
 	public int textSortingOrder = 499;
@@ -24,6 +24,7 @@ public class DynamicText : MonoBehaviour {
 	
 	private void Start () {
 		prefab_Letter = Resources.Load("Prefabs/UI/Letter", typeof(GameObject)) as GameObject;
+		textContainer = transform.Find("[TextContainer]");
 	}
 
 	private void Update () {
@@ -76,10 +77,8 @@ public class DynamicText : MonoBehaviour {
 					}
 				}
 			}
-
-			int copyCount = (useBorder == true ? 5 : 2);
-
-			for (int i = 0; i < copyCount; i++) {
+			
+			for (int i = 0; i < textCount; i++) {
 				float widthCurrent = 0;
 				foreach (Sprite textSprite in textSprites) {
 					GameObject newLetter = (GameObject)Instantiate(prefab_Letter, transform.position, Quaternion.identity, textContainer);

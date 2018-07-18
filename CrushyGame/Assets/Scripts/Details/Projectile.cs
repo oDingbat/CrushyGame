@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour {
 	public float bounciness;        // The bounciness coefficient of the projectile
 	public int ricochetCount;       // The number of ricochets the projectile has left
 	public float lifespan;          // The lifespan of the projectile
+	public bool useCollision = true;// Does the projectile use collision
 
 	Vector2 velocity;        // The current velocity of the projectile
 	bool isBroken = false;
@@ -32,18 +33,21 @@ public class Projectile : MonoBehaviour {
 		// Setup raycast
 		Vector2 origin = transform.position;
 		Vector2 deltaMove = velocity * Time.deltaTime;
-		RaycastHit2D hit = Physics2D.Raycast(origin, deltaMove, deltaMove.magnitude, collisionMask);
 
-		if (hit.transform != null) {
-			if (ricochetCount > 0) {
-				velocity = Vector2.Reflect(velocity * bounciness, hit.normal);          // Bounce projectile off of surface
-				velocity = Quaternion.Euler(0, 0, Random.Range(-10f, 10f)) * velocity;	// Give velocity a randomized rotation offset from bouncing
-				transform.position = (Vector3)hit.point + (Vector3)(velocity.normalized * 0.0025f) + new Vector3(0, 0, -0.5f);			// Move projectile towards where it hit
+		if (useCollision == true) {
+			RaycastHit2D hit = Physics2D.Raycast(origin, deltaMove, deltaMove.magnitude, collisionMask);
+
+			if (hit.transform != null) {
+				if (ricochetCount > 0) {
+					velocity = Vector2.Reflect(velocity * bounciness, hit.normal);          // Bounce projectile off of surface
+					velocity = Quaternion.Euler(0, 0, Random.Range(-10f, 10f)) * velocity;  // Give velocity a randomized rotation offset from bouncing
+					transform.position = (Vector3)hit.point + (Vector3)(velocity.normalized * 0.0025f) + new Vector3(0, 0, -0.5f);          // Move projectile towards where it hit
+				} else {
+					StartCoroutine(BreakProjectile());              // Break the projectile
+				}
 			} else {
-				StartCoroutine(BreakProjectile());              // Break the projectile
+				transform.position += (Vector3)deltaMove;           // Didn't hit anything? Move projectile forward
 			}
-		} else {
-			transform.position += (Vector3)deltaMove;           // Didn't hit anything? Move projectile forward
 		}
 
 		// Deceleration

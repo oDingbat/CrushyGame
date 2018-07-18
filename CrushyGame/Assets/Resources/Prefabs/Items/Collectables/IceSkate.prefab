@@ -106,12 +106,11 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: IceSkate
-    color: {r: 0.7843138, g: 0.29411766, b: 0.22352943, a: 1}
     animController: {fileID: 9100000, guid: 415a380fdf046794192d742acc32560d, type: 2}
     attributes:
-      speed: 1
-      acceleration: 1
-      deceleration: -9
+      speed: 2
+      acceleration: 0
+      deceleration: 0
       jumpHeight: 0
       magnetism: 0
       weight: 0

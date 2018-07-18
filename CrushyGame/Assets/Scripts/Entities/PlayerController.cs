@@ -44,8 +44,8 @@ public class PlayerController : Entity {
 	public List<MagnetizedItemDrop> magnetizedItems = new List<MagnetizedItemDrop>();
 
 	// Raycast stuff
-	int horizontalRaycasts = 12;
-	int verticalRaycasts = 5;
+	int horizontalRaycasts = 6;
+	int verticalRaycasts = 3;
 	float skinWidth = 0.01f;
 
 	[Space(10)] [Header("Character Settings")]
@@ -61,7 +61,7 @@ public class PlayerController : Entity {
 	float jumpForgiveness = 0.1f;
 	public bool isEnabled;              // Is the playerController currently enabled?
 	float touchingWallTestScale = 0.85f;
-	int touchingWallRaycasts = 10;
+	int touchingWallRaycasts = 5;
 	int airJumpsLeft;
 	int deathCount;
 	
@@ -113,6 +113,7 @@ public class PlayerController : Entity {
 
 	private void Update () {
 		UpdateInput();
+		UpdateUI();
 
 		if (isDead == false) {
 			UpdateMovement();
@@ -121,7 +122,6 @@ public class PlayerController : Entity {
 			UpdatePhysicsSimulator();
 
 			UpdateKillzone();
-			UpdateMagnetism();
 		} else {
 			if (corpse != null) {
 				transform.position = corpse.transform.Find("Ragdoll_Head").position;
@@ -133,15 +133,23 @@ public class PlayerController : Entity {
 		}
 	}
 
+	private void FixedUpdate () {
+		UpdateMagnetism();
+	}
+
 	private void UpdateInput() {
 		if (isEnabled) {
 			// Movement
-			bool left = Input.GetKey(controlScheme.left) || Input.GetKey(controlScheme.leftAlt) || (Input.GetAxis("G_Horizontal") < -0.01f ? true : false);
-			bool right = Input.GetKey(controlScheme.right) || Input.GetKey(controlScheme.rightAlt) || (Input.GetAxis("G_Horizontal") > 0.01f ? true : false);
+			List<Touch> touches = Input.touches.ToList();
+			Vector2 screenRes = new Vector2(Screen.width, Screen.height);
+
+			bool left = Input.GetKey(controlScheme.left) || Input.GetKey(controlScheme.leftAlt) || (Input.GetAxis("G_Horizontal") < -0.01f ? true : false) || touches.Exists(t => t.position.x < screenRes.x * 0.25f);
+			bool right = Input.GetKey(controlScheme.right) || Input.GetKey(controlScheme.rightAlt) || (Input.GetAxis("G_Horizontal") > 0.01f ? true : false) || touches.Exists(t => t.position.x > screenRes.x * 0.25f && t.position.x < screenRes.x * 0.5f);
+
 			inputMovement = (left != right) ? (left ? -1 : 1) : 0;
 
 			// Jumping
-			bool jump = Input.GetKeyDown(controlScheme.jump) || Input.GetKeyDown(controlScheme.jumpAlt) || Input.GetButtonDown("G_Jump") ? true : false;
+			bool jump = Input.GetKeyDown(controlScheme.jump) || Input.GetKeyDown(controlScheme.jumpAlt) || Input.GetButtonDown("G_Jump") ? true : false || touches.Exists(t => t.position.x > screenRes.x * 0.75f && t.phase == TouchPhase.Began);
 			if (jump) {
 				timeLastPressedJump = Time.time;
 			}
@@ -170,8 +178,12 @@ public class PlayerController : Entity {
 		}
 	}
 
+	private void UpdateUI () {
+
+	}
+
 	private void UpdateMovement () {
-		velocity = Vector2.Lerp(velocity, new Vector2(inputMovement * (float)attributesCombined.speed, velocity.y), (grounded == true ? (inputMovement == 0 ? (float)attributesCombined.deceleration * 1.75f : (float)attributesCombined.acceleration * 0.625f) : (inputMovement == 0 ? (float)attributesCombined.deceleration * 0.125f : (float)attributesCombined.acceleration * 0.625f)) * Time.deltaTime);
+		velocity = Vector2.Lerp(velocity, new Vector2(inputMovement * (float)attributesCombined.speed, velocity.y), (grounded == true ? (inputMovement == 0 ? (float)attributesCombined.deceleration * 2f : (float)attributesCombined.acceleration * 0.625f) : (inputMovement == 0 ? (float)attributesCombined.deceleration * 1.25f : (float)attributesCombined.acceleration * 0.625f)) * Time.deltaTime);
 
 		// Jumping
 		if (timeLastJumped + 0.025f < Time.time && timeLastPressedJump + jumpForgiveness > Time.time) { // Make sure we didnt just jump, give jumping a little wiggle room
@@ -323,7 +335,7 @@ public class PlayerController : Entity {
 		bool hasMagnetism = attributesCombined.magnetism > 0;
 
 		if (hasMagnetism == true) {
-			List<GameObject> items = GameObject.FindGameObjectsWithTag("Item").ToList();
+			List<GameObject> items = monster.itemDrops.Select(i => i.gameObject).ToList();
 
 			float magnetismDistance = Mathf.Sqrt(attributesCombined.magnetism) * 2f;
 
@@ -349,13 +361,13 @@ public class PlayerController : Entity {
 				} else {
 					Vector3 direction = transform.position - magnetizedItem.itemDrop.transform.position;
 					direction = direction.normalized * Mathf.Pow(1 / direction.magnitude, 2f) * 8f;
-					magnetizedItem.itemDrop.velocity = Vector2.Lerp(magnetizedItem.itemDrop.velocity, direction * Mathf.Sqrt(attributesCombined.magnetism) * 0.75f, 10 * Time.deltaTime);
+					magnetizedItem.itemDrop.velocity = Vector2.Lerp(magnetizedItem.itemDrop.velocity, direction * Mathf.Sqrt(attributesCombined.magnetism) * 0.75f, 10 * Time.fixedDeltaTime);
 				}
 
 				// Lightning
 				if (magnetizedItem.itemDrop != null) {
 					float itemDistance = Mathf.Clamp(Vector2.Distance(transform.position, magnetizedItem.itemDrop.transform.position), 0.25f, 10);
-					magnetizedItem.lightningCooldown = Mathf.Clamp(magnetizedItem.lightningCooldown - Mathf.Pow(10f / itemDistance, 1.25f) * Mathf.Sqrt(attributesCombined.magnetism) * Time.deltaTime, 0, Mathf.Infinity);
+					magnetizedItem.lightningCooldown = Mathf.Clamp(magnetizedItem.lightningCooldown - Mathf.Pow(10f / itemDistance, 1.25f) * Mathf.Sqrt(attributesCombined.magnetism) * Time.fixedDeltaTime, 0, Mathf.Infinity);
 					if (magnetizedItem.lightningCooldown <= 0) {
 						// Add cooldown
 						magnetizedItem.lightningCooldown += UnityEngine.Random.Range(0.25f, 1.5f);

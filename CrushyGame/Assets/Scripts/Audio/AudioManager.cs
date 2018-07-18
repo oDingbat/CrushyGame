@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour {
 	public List<AudioSource> jukeboxes;
 	public GameObject prefab_jukebox;
 
-	int jukeboxCount = 24;
+	int jukeboxCount = 16;
 	int jukeboxIndex = 0;
 
 	private void Start () {

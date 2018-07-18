@@ -9,8 +9,8 @@ public class HeartImage : MonoBehaviour {
 	public GameManager gameManager;
 
 	public int heartIndex;							// Index of the heart image
-	public bool isCursed;							// Is this heart a cursed heart?
-	
+	public bool isCursed;                           // Is this heart a cursed heart?
+
 	[Space (10)][Header ("Prefabs")]
 	public GameObject prefab_BurstParticle;			// Prefab for the burstParticles which are created when the Burst function is called
 
@@ -37,6 +37,8 @@ public class HeartImage : MonoBehaviour {
 		// Lerp the position of the image
 		float verticalPos = (isCursed == false ? heartIndex * -0.75f : (player.attributesCombined.heartsMax * -0.75f) + (heartIndex * -0.75f));		// Vertical pos, allows the hearts to move vertically if a new heart is inserted in between them
 		transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(desiredPos.x, verticalPos), 2.5f * Time.deltaTime);
+
+		Debug.Log(player.attributesCombined.hearts < (heartIndex + 1));
 
 		if (isCursed == false) {
 			heartBodySpriteRenderer.enabled = (transform.position.y < -2f || player.attributesCombined.hearts < (heartIndex + 1) ? false : true);

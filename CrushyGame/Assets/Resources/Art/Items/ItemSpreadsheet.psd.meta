@@ -110,10 +110,10 @@ TextureImporter:
     21300210: Item_Heart1
     21300212: Item_Heart2
     21300214: Item_Heart3
-    21300216: Item_New4
-    21300218: Item_New5
-    21300220: Item_New6
-    21300222: Item_New7
+    21300216: Item_Cherries4
+    21300218: Item_Cherries5
+    21300220: Item_Cherries6
+    21300222: Item_Cherries7
     21300224: Item_Heart_Empty
     21300226: Item_CursedHeart0
     21300228: Item_CursedHeart1
@@ -149,7 +149,7 @@ TextureImporter:
     21300288: Item_Tomato3
     21300290: Item_Tomato5
     21300292: ItemSpreadsheet_0
-    21300294: ItemSpreadsheet_1
+    21300294: Item_Cherries0
     21300296: ItemSpreadsheet_2
     21300298: ItemSpreadsheet_3
     21300300: ItemSpreadsheet_4
@@ -174,6 +174,12 @@ TextureImporter:
     21300338: ItemSpreadsheet_22
     21300340: ItemSpreadsheet_23
     21300342: ItemSpreadsItem__24
+    21300344: Item_New1
+    21300346: Item_New2
+    21300348: Item_New3
+    21300350: Item_Cherries1
+    21300352: Item_Cherries2
+    21300354: Item_Cherries3
   externalObjects: {}
   serializedVersion: 6
   mipmaps:
@@ -2971,6 +2977,166 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 6cd6db7a3ed356a4bbc53125dee957e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Cherries0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 122
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acd79775bf41ce48acefbc1f1d4a06c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Cherries1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 122
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ad632d6006ca948bc481e4418cf9d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Cherries2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 122
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7cabe5742303f4dbe3a1604bcfd9e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Cherries3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 122
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e9505ec7c5ac84ab6c9a9e25809bec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Cherries4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 122
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0929add0778f54384294626f242d9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Cherries5
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 122
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7776363afe214554f8eeb4dac132ee91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Cherries6
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 122
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef0dd7824dc2e9428382c221c2e4915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Cherries7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 122
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7490c38b6fe2e6044b794cf2eaea246e
       vertices: []
       indices: 
       edges: []

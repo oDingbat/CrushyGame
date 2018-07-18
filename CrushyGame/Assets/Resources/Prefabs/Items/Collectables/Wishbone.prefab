@@ -106,10 +106,9 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Wishbone
-    color: {r: 0.8000001, g: 0.7568628, b: 0.7137255, a: 1}
     animController: {fileID: 9100000, guid: 93735dd1068639249b603d690704c6f0, type: 2}
     attributes:
-      speed: -2
+      speed: 0
       acceleration: 0
       deceleration: 0
       jumpHeight: 0

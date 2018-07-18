@@ -13,6 +13,7 @@ public class ControlScheme {
 	public KeyCode zoom, zoomAlt;
 	public KeyCode suicide, suicideAlt;
 	public KeyCode characterSwap, characterSwapAlt;
+	public KeyCode pause, pauseAlt;
 
 	public enum ControlSchemePreset { Null, WASD, Arrows, NumPad, Controller }
 
@@ -27,6 +28,7 @@ public class ControlScheme {
 				suicide = KeyCode.K;
 				zoom = KeyCode.Z;
 				characterSwap = KeyCode.Q;
+				pause = KeyCode.Escape;
 
 				// Alts
 				leftAlt = KeyCode.LeftArrow;
@@ -42,6 +44,7 @@ public class ControlScheme {
 				down = KeyCode.DownArrow;
 				suicide = KeyCode.RightControl;
 				characterSwap = KeyCode.RightShift;
+				pause = KeyCode.Escape;
 				break;
 			case (ControlSchemePreset.NumPad):
 				jump = KeyCode.KeypadEnter;
@@ -51,6 +54,7 @@ public class ControlScheme {
 				down = KeyCode.Keypad5;
 				suicide = KeyCode.KeypadPeriod;
 				characterSwap = KeyCode.Plus;
+				pause = KeyCode.Escape;
 				break;
 		}
 

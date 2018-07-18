@@ -43,12 +43,12 @@ public class TextFloater : DynamicText {
 		Destroy(gameObject);
 	}
 
-	private void Update () {
+	private void FixedUpdate () {
 		if (transform.position.y >= startingHeight + moveDistance || transform.position.y > 9.5f) {
 			doneMoving = true;
 		}
 		
-		transform.position += new Vector3(0, speed * Time.deltaTime);       // Move the text floater upwards
+		transform.position += new Vector3(0, speed * Time.fixedDeltaTime);       // Move the text floater upwards
 
 		FixTextContainerPosition();
 	}

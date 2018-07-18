@@ -84,7 +84,7 @@ MonoBehaviour:
   textContainer: {fileID: 0}
   textColor: {r: 0.9686275, g: 0.95294124, b: 0.9450981, a: 1}
   borderColor: {r: 0.18823531, g: 0.17254902, b: 0.18039216, a: 1}
-  useBorder: 1
+  textCount: 2
   text: 
   textAlignment: 1
   textSortingOrder: 2500

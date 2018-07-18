@@ -38,18 +38,20 @@ public class MonsterController : MonoBehaviour {
 	public int currentGap;						// The index of the current gap
 	public int nextGap;                         // The index of the tooth that will have a gap NEXT cycle
 	public List<GameObject> itemPool;           // The list of items which can be dropped
-	public float itemDropRate;					// The number of cycles between each item drop
+	public float itemDropRate;                  // The number of cycles between each item drop
+	public List<ItemDrop> itemDrops;			// List of item drops currently dropped
 
 	[Space (10)][Header ("Audio Settings")]
 	public AudioClip clip_smashTeeth;
 
 	// Mouth calculated values
-	float toothWidth;                           // The width of an individual tooth
+	float toothWidth;							// The width of an individual tooth
 	float toothHeight;                          // The height of an individual tooth
 	float jawTopVelocity;						// The velocity of the top jaw
 	float jawBottomVelocity;                    // The veloicty of the bottom jaw
 	float mouthHeight;                          // The distance between the top jaw and the bottom jaw when the mouth is fully open
 	int cycleCount;                             // The current number cycle the mouth is on
+	public float mouthWidth;					// The total mouth width (calculated for gameManager)
 	
 	[Space (10)][Header ("Mouth References")]
 	public Transform mouth;                     // Reference for the mouth piece
@@ -62,7 +64,8 @@ public class MonsterController : MonoBehaviour {
 	public Transform jawBottom;                 // Reference for the bottom jaw
 	public List<Transform> teethTop;            // List of all teeth along the top jaw
 	public List<Transform> teethBottom;         // List of all teeth along the bottom jaw
-	public List<Transform> teeth;				// List of all teeth the monster has (including top and bottom jaws)
+	public List<Transform> teeth;               // List of all teeth the monster has (including top and bottom jaws)
+	public List<BoxCollider2D> teethColliders;	// List of all teeth colliders (including top and bottom jaws)
 	public List<float> teethOffsets;			// List of all of the offsets for every tooth (length = teethCount * 2)
 	public List<float> teethMorphDistances;     // The distance between each tooth's previousOffset and newOffset (used for individual tooth morph speed)
 	public Transform jawUILeft;                 // Reference for jawUILeft which contains UI elements locked to the left of the jaw
@@ -173,7 +176,12 @@ public class MonsterController : MonoBehaviour {
 
 		teeth.AddRange(teethTop);
 		teeth.AddRange(teethBottom);
-		
+
+		teethColliders.Clear();
+		foreach (Transform tooth in teeth) {
+			teethColliders.Add(tooth.GetComponent<BoxCollider2D>());
+		}
+
 		// Resize Gums
 		ResizeGums();
 	}
@@ -181,8 +189,9 @@ public class MonsterController : MonoBehaviour {
 	private void SetMouthSize () {
 		mouthHeight = ((teethHeightPositions - 1) * teethHeightInterval) + mouthOpenSpace;
 		float jawDistance = Mathf.Abs(jawTop.transform.localPosition.y - jawBottom.transform.localPosition.y) + ((teethHeightPositions - 1) * teethHeightInterval) + 3;
-		
-		mouthSpriteRenderer.size = new Vector2((teethCount * toothWidth) + 2, jawDistance + 1);
+
+		mouthWidth = (teethCount * toothWidth) + 2;
+		mouthSpriteRenderer.size = new Vector2(mouthWidth, jawDistance + 1);
 		mouth.transform.position = new Vector2(0, ((jawTop.transform.localPosition.y + jawBottom.transform.localPosition.y) / 2) + (teethHeightInterval * 0.5f * (teethHeightPositions - 1)));
 
 		mouthInnerSpriteRenderer.size = new Vector2((teethCount * toothWidth) + 2, jawDistance + 1);
@@ -193,8 +202,8 @@ public class MonsterController : MonoBehaviour {
 		mouthWallRight.transform.position = new Vector3((teethCount * toothWidth * 0.5f) + 0.5f, 0);
 
 		// Position Jaw UI
-		jawUILeft.transform.localPosition = new Vector3(teethCount * -toothWidth * 0.5f - 1, 0, 0);
-		jawUIRight.transform.localPosition = new Vector3(teethCount * toothWidth * 0.5f + 1, 0, 0);
+		jawUILeft.transform.localPosition = new Vector3(teethCount * -toothWidth * 0.5f - 0.833333f, 0, 0);
+		jawUIRight.transform.localPosition = new Vector3(teethCount * toothWidth * 0.5f + 0.833333f, 0, 0);
 
 		// Position head
 		head.transform.position = new Vector3(0, mouth.transform.position.y + (jawDistance + 1) / 2);
@@ -362,44 +371,63 @@ public class MonsterController : MonoBehaviour {
 
 		// Move Vertically
 		float deltaY = deltaP.y;
-		int raycasts = 10;
+		int raycasts = 5;
 		float skinWidth = 0.05f;
 
+		int toothIndexCurrent = 0;
+
 		foreach (Transform tooth in teethSection.transform.Find("[Teeth]")) {
-			BoxCollider2D toothCollider = tooth.GetComponent<BoxCollider2D>();
+			toothIndexCurrent++;
+			bool collisionRequired = false;     // Is collision required for this tooth? Only if it's x distance from any player/item is less than a set distance
+
+			if (Mathf.Abs(tooth.position.x - player.transform.position.x) < toothWidth) {
+				collisionRequired = true;
+			} else {
+				foreach (ItemDrop d in itemDrops) {
+					if (Mathf.Abs(tooth.position.x - d.transform.position.x) < toothWidth) {
+						collisionRequired = true;
+						break;
+					}
+				}
+			}
 			
-			// Pushing
-			for (int i = 0; i < raycasts; i++) {
-				float colliderXSmaller = toothCollider.size.x - (skinWidth / 2);
-				float raycastIncrement = colliderXSmaller / (float)(raycasts - 1);       // Gets the increment between each raycast
-				Vector2 origin = (Vector2)tooth.position + new Vector2(-(colliderXSmaller / 2) + i * raycastIncrement, ((toothCollider.size.y / 2) - skinWidth) * Mathf.Sign(deltaY)) + toothCollider.offset;
-				Vector2 direction = new Vector2(0, Mathf.Sign(deltaY));
-				//Debug.DrawRay(origin, direction, Color.red, 0);
+			if (collisionRequired == true) {
 
-				RaycastHit2D[] hits = Physics2D.RaycastAll(origin, direction, Mathf.Abs(deltaY) + skinWidth, entityAndRagdollMask);
+				BoxCollider2D toothCollider = teethColliders[toothIndexCurrent];
 
-				foreach (RaycastHit2D hit in hits) {
-					if (hit.distance > skinWidth / 2) {
-						Transform hitTransform = (hit.transform.gameObject.layer != LayerMask.NameToLayer("Rigibody") ? hit.transform : hit.transform.parent);
-						if (pushedEntities.Exists(h => h.transform == hitTransform) == false) {
-							pushedEntities.Add(hit);
-							if (hit.transform.gameObject.layer != LayerMask.NameToLayer("Rigidbody")) {
-								float deltaMinusDistance = (deltaY + (-Mathf.Sign(deltaY) * (hit.distance - skinWidth)));
-								hitTransform.position += (Vector3)new Vector2(0, deltaMinusDistance);
-							} else {
-								hit.transform.GetComponent<Rigidbody2D>().velocity = new Vector2(hit.transform.GetComponent<Rigidbody2D>().velocity.x, jawVelocity * 12.5f);
+				// Pushing
+				for (int i = 0; i < raycasts; i++) {
+					float colliderXSmaller = toothCollider.size.x - (skinWidth / 2);
+					float raycastIncrement = colliderXSmaller / (float)(raycasts - 1);       // Gets the increment between each raycast
+					Vector2 origin = (Vector2)tooth.position + new Vector2(-(colliderXSmaller / 2) + i * raycastIncrement, ((toothCollider.size.y / 2) - skinWidth) * Mathf.Sign(deltaY)) + toothCollider.offset;
+					Vector2 direction = new Vector2(0, Mathf.Sign(deltaY));
+					//Debug.DrawRay(origin, direction, Color.red, 0);
+
+					RaycastHit2D[] hits = Physics2D.RaycastAll(origin, direction, Mathf.Abs(deltaY) + skinWidth, entityAndRagdollMask);
+
+					foreach (RaycastHit2D hit in hits) {
+						if (hit.distance > skinWidth / 2) {
+							Transform hitTransform = (hit.transform.gameObject.layer != LayerMask.NameToLayer("Rigibody") ? hit.transform : hit.transform.parent);
+							if (pushedEntities.Exists(h => h.transform == hitTransform) == false) {
+								pushedEntities.Add(hit);
+								if (hit.transform.gameObject.layer != LayerMask.NameToLayer("Rigidbody")) {
+									float deltaMinusDistance = (deltaY + (-Mathf.Sign(deltaY) * (hit.distance - skinWidth)));
+									hitTransform.position += (Vector3)new Vector2(0, deltaMinusDistance);
+								} else {
+									hit.transform.GetComponent<Rigidbody2D>().velocity = new Vector2(hit.transform.GetComponent<Rigidbody2D>().velocity.x, jawVelocity * 12.5f);
+								}
 							}
 						}
 					}
 				}
-			}
 
-			// Pulling
-			if (Mathf.Sign(deltaY) == -1) {
-				Collider2D[] newPulledPlayers = Physics2D.OverlapBoxAll((Vector2)tooth.position + new Vector2(0, toothCollider.size.y / 2), new Vector2(toothCollider.size.x - (1f / 24f), 0.125f), 0, entityMask);
-				foreach (Collider2D pulledPlayer in newPulledPlayers) {
-					if (pulledPlayers.Contains(pulledPlayer) == false) {
-						pulledPlayers.Add(pulledPlayer);
+				// Pulling
+				if (Mathf.Sign(deltaY) == -1) {
+					Collider2D[] newPulledPlayers = Physics2D.OverlapBoxAll((Vector2)tooth.position + new Vector2(0, toothCollider.size.y / 2), new Vector2(toothCollider.size.x - (1f / 24f), 0.125f), 0, entityMask);
+					foreach (Collider2D pulledPlayer in newPulledPlayers) {
+						if (pulledPlayers.Contains(pulledPlayer) == false) {
+							pulledPlayers.Add(pulledPlayer);
+						}
 					}
 				}
 			}
@@ -447,7 +475,7 @@ public class MonsterController : MonoBehaviour {
 		List<PlayerDelta> pulledPlayers = new List<PlayerDelta>();
 
 		// Raycast info
-		int raycasts = 10;
+		int raycasts = 5;
 		float skinWidth = 0.05f;
 
 		for (int j = 0; j < teeth.Count; j++) {
@@ -461,8 +489,8 @@ public class MonsterController : MonoBehaviour {
 
 			// Move Vertically
 			float deltaY = deltaP.y;
-			
-			BoxCollider2D toothCollider = tooth.GetComponent<BoxCollider2D>();
+
+			BoxCollider2D toothCollider = teethColliders[j];
 
 			// Pushing
 			for (int i = 0; i < raycasts; i++) {
@@ -617,15 +645,16 @@ public class MonsterController : MonoBehaviour {
 				float heartsMissing = player.attributesCombined.heartsMax - player.attributesCombined.hearts;
 				float luckCoefficient = Mathf.Clamp(Mathf.Sqrt(Mathf.Abs(player.attributesCombined.luck) * 10f) * Mathf.Sign(player.attributesCombined.luck) * 0.01f, -0.1f, 0.1f) * (heartsMissing);
 				float probability = (0.5f / (float)player.attributesCombined.hearts) + luckCoefficient;
-				Debug.Log("Probability: " + (probability * 100) + "%  -  LuckCoefficient: " + (luckCoefficient * 100) + "%");
+				//Debug.Log("Probability: " + (probability * 100) + "%  -  LuckCoefficient: " + (luckCoefficient * 100) + "%");
 				GameObject randomItem = (UnityEngine.Random.Range(0f, 1) <= probability && heartsMissing > 0 ? (UnityEngine.Random.Range(0f, 1f) > 0.9f ? prefab_cursedHeart : prefab_heart) : prefab_coin);
 				GameObject newItem = (GameObject)Instantiate(randomItem, teeth[randomToothIndex].position + new Vector3((1f / 24f), -0.25f), Quaternion.identity);
+				itemDrops.Add(newItem.GetComponent<ItemDrop>());
 			} else {
 				if (itemPool.Count > 0) {       // Make sure we have items left
 					int randomItemIndex = UnityEngine.Random.Range(0, itemPool.Count);
-					Debug.Log(randomItemIndex);
 					GameObject newItem = Instantiate(itemPool[randomItemIndex], teeth[randomToothIndex].position + new Vector3((1f / 24f), -0.25f), Quaternion.identity);
 					itemPool.RemoveAt(randomItemIndex);
+					itemDrops.Add(newItem.GetComponent<ItemDrop>());
 				}
 			}
 		}
@@ -668,6 +697,11 @@ public class MonsterController : MonoBehaviour {
 		teeth.Clear();
 		teeth.AddRange(teethTop);
 		teeth.AddRange(teethBottom);
+
+		teethColliders.Clear();
+		foreach (Transform tooth in teeth) {
+			teethColliders.Add(tooth.GetComponent<BoxCollider2D>());
+		}
 
 		float netExpansion = (float)expansionLeft + (float)expansionRight;
 
@@ -751,7 +785,6 @@ public class MonsterController : MonoBehaviour {
 			// Gap Right Side particles
 			if (currentGap == 0) {
 				float gapOffsetLeft = teeth[currentGap].localPosition.y - teeth[currentGap + 1].localPosition.y;
-				Debug.Log(gapOffsetLeft);
 				gapOffsetLeft = (gapOffsetLeft == 0 ? -p : (gapOffsetLeft == teethHeightInterval ? p : 0));
 				if (gapOffsetLeft != 0) {
 					CreateIndividualSmashParticles(teeth[currentGap + 1], -1f, new Vector3(0, gapOffsetLeft, 0));

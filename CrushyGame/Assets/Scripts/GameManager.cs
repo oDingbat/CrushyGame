@@ -49,23 +49,31 @@ public class GameManager : MonoBehaviour {
 	private void Update() {
 		if (UI_score != null) {
 			UI_score.transform.localScale = Vector3.one * sizePoints;
-			sizePoints = Mathf.Clamp(sizePoints - Time.deltaTime * 10f, 1f, Mathf.Infinity);
+			sizePoints = Mathf.Clamp(sizePoints - Time.deltaTime * 10f, 2f, Mathf.Infinity);
 		} else {
 			if (GameObject.FindGameObjectWithTag("ScoreCounter") != null) {
 				UI_score = GameObject.FindGameObjectWithTag("ScoreCounter").GetComponent<DynamicText>();
 			}
 		}
 
+		PositionUIContainers();
+
 		UI_coins.transform.localScale = Vector3.one * sizeCoins;
 		sizeCoins = Mathf.Clamp(sizeCoins - Time.deltaTime * 10f, 1f, Mathf.Infinity);
 	}
 
 	public void OnPlayerLived () {
-		sizePoints = 3f;
+		sizePoints = 4f;
 		points++;
 		if (UI_score != null) {
 			UI_score.SetText(points.ToString());
 		}
+	}
+
+	private void PositionUIContainers () {
+		float verticalOffset = Mathf.Clamp((monster.mouthWidth - 6f) / 2, 0, 10);
+		heartCollectionContainer.localPosition = new Vector3(heartCollectionContainer.localPosition.x, 1.96f + verticalOffset);
+		itemCollectionContainer.localPosition = new Vector3(heartCollectionContainer.localPosition.x, 1.96f + verticalOffset);
 	}
 
 	public void OnCoinGrabbed (int value) {
@@ -75,7 +83,9 @@ public class GameManager : MonoBehaviour {
 		UI_coins.SetText(coins.ToString());
 	}
 
-	public void CollectItem (Item item) {
+	public void CollectItem (ItemDrop itemDrop) {
+		Item item = itemDrop.item;
+
 		// Dont collect Item if we already have one of it
 		if (itemsCollected.Exists(i => i.name == item.name)) {
 			return;
