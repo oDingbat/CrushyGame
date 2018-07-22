@@ -93,7 +93,6 @@ public class MonsterController : MonoBehaviour {
 	[Space (10)][Header ("Prefabs")]
 	public GameObject prefab_coin;
 	public GameObject prefab_heart;
-	public GameObject prefab_cursedHeart;
 	public GameObject prefab_projectileTeethSmash;
 
 	private void Start () {
@@ -251,7 +250,7 @@ public class MonsterController : MonoBehaviour {
 				MoveJaw(jawBottom, new Vector2(0, -0.5f), ref jawBottomVelocity, mouthSpeedCurrent);
 
 				if (Vector2.Distance(jawTop.position, jawBottom.position) <= 1) {
-					if (player.isDead == false || player.attributesCombined.hearts > 0 || player.attributesCombined.cursedHearts > 0) {
+					if (player.isDead == false || player.attributesCombined.hearts > 0) {
 						cycleCount++;
 						if (EventPlayerLived != null) { EventPlayerLived(); }
 					}
@@ -269,7 +268,7 @@ public class MonsterController : MonoBehaviour {
 
 			// Player death handling
 			if (player.isDead == true) {
-				if (player.attributesCombined.hearts <= 0 && player.attributesCombined.cursedHearts <= 0) {   // if the player is dead foreal, smash that boi
+				if (player.attributesCombined.hearts <= 0) {   // if the player is dead foreal, smash that boi
 					mouthPhase = MouthPhase.Smashing;
 					while (mouthPhase == MouthPhase.Smashing) {
 						//Debug.Log("Smashing");
@@ -642,11 +641,11 @@ public class MonsterController : MonoBehaviour {
 
 			// Drop either a coin or an item from the itemPool
 			if ((cycleCount == 0 || itemPool.Count <= 0 || cycleCount % itemDropRate != 0) && cycleCount != 5) {    // Drop coin/heart or item?
-				float heartsMissing = player.attributesCombined.heartsMax - player.attributesCombined.hearts;
+				float heartsMissing = 7 - player.attributesCombined.hearts;
 				float luckCoefficient = Mathf.Clamp(Mathf.Sqrt(Mathf.Abs(player.attributesCombined.luck) * 10f) * Mathf.Sign(player.attributesCombined.luck) * 0.01f, -0.1f, 0.1f) * (heartsMissing);
-				float probability = (0.5f / (float)player.attributesCombined.hearts) + luckCoefficient;
+				float probability = (0.25f / (float)player.attributesCombined.hearts) + luckCoefficient;
 				//Debug.Log("Probability: " + (probability * 100) + "%  -  LuckCoefficient: " + (luckCoefficient * 100) + "%");
-				GameObject randomItem = (UnityEngine.Random.Range(0f, 1) <= probability && heartsMissing > 0 ? (UnityEngine.Random.Range(0f, 1f) > 0.9f ? prefab_cursedHeart : prefab_heart) : prefab_coin);
+				GameObject randomItem = (UnityEngine.Random.Range(0f, 1) <= probability && heartsMissing > 0 ? prefab_heart : prefab_coin);
 				GameObject newItem = (GameObject)Instantiate(randomItem, teeth[randomToothIndex].position + new Vector3((1f / 24f), -0.25f), Quaternion.identity);
 				itemDrops.Add(newItem.GetComponent<ItemDrop>());
 			} else {

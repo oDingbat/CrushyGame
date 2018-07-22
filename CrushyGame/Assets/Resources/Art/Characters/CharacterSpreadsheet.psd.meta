@@ -2,31 +2,151 @@ fileFormatVersion: 2
 guid: cf52c6a99f2e9c44cad4044e3b2d411f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Character_Player_Standing0
-    21300002: Character_Player_Walking0
-    21300004: Character_Player_Walking1
-    21300006: Character_Player_Walking2
-    21300008: Character_Player_Walking3
-    21300010: Character_Player_Walking4
-    21300012: Character_Player_Walking5
-    21300014: Character_Player_WallSliding0
-    21300016: Character_Player_Jumping0
-    21300018: Character_Player_Falling0
-    21300020: Character_Player_Falling1
-    21300022: Character_Player_Falling2
-    21300024: Character_Player_Ragdoll_Head
-    21300026: Character_Player_Ragdoll_Torso
-    21300028: Character_Player_Ragdoll_Waist
-    21300030: Character_Player_Ragdoll_ArmL0
-    21300032: Character_Player_Ragdoll_ArmL1
-    21300034: Character_Player_Ragdoll_ArmR0
-    21300036: Character_Player_Ragdoll_ArmR1
-    21300038: Character_Player_Ragdoll_LegL0
-    21300040: Character_Player_Ragdoll_LegL1
-    21300042: Character_Player_Ragdoll_LegR0
-    21300044: Character_Player_Ragdoll_LegR1
+    21300000: Character_Dev_Standing0
+    21300002: Character_Dev_Walking0
+    21300004: Character_Dev_Walking1
+    21300006: Character_Dev_Walking2
+    21300008: Character_Dev_Walking3
+    21300010: Character_Dev_Walking4
+    21300012: Character_Dev_Walking5
+    21300014: Character_Dev_WallSliding0
+    21300016: Character_Dev_Jumping0
+    21300018: Character_Dev_Falling0
+    21300020: Character_Dev_Falling1
+    21300022: Character_Dev_Falling2
+    21300024: Character_Dev_Ragdoll_Head
+    21300026: Character_Dev_Ragdoll_Torso
+    21300028: Character_Dev_Ragdoll_Waist
+    21300030: Character_Dev_Ragdoll_ArmL0
+    21300032: Character_Dev_Ragdoll_ArmL1
+    21300034: Character_Dev_Ragdoll_ArmR0
+    21300036: Character_Dev_Ragdoll_ArmR1
+    21300038: Character_Dev_Ragdoll_LegL0
+    21300040: Character_Dev_Ragdoll_LegL1
+    21300042: Character_Dev_Ragdoll_LegR0
+    21300044: Character_Dev_Ragdoll_LegR1
+    21300046: Character_Dev_Standing1
+    21300048: Character_Dev_Standing2
+    21300050: Character_Dev_Standing3
+    21300052: Character_Dev_Walking6
+    21300054: Character_Dev_Walking7
+    21300056: Character_Dev_Walking8
+    21300058: Character_Dev_Walking9
+    21300060: Character_Dev_Walking10
+    21300062: Character_Dev_Walking11
+    21300064: Character_Dev_Falling3
+    21300066: Character_Dude_Standing0
+    21300068: Character_Dude_Standing1
+    21300070: Character_Dude_Standing2
+    21300072: Character_Dude_Standing3
+    21300074: Character_Dude_Walking0
+    21300076: Character_Dude_Walking1
+    21300078: Character_Dude_Walking2
+    21300080: Character_Dude_Walking3
+    21300082: Character_Dude_Walking4
+    21300084: Character_Dude_Walking5
+    21300086: Character_Dude_Walking6
+    21300088: Character_Dude_Walking7
+    21300090: Character_Dude_Walking8
+    21300092: Character_Dude_Walking9
+    21300094: Character_Dude_Walking10
+    21300096: Character_Dude_Walking11
+    21300098: Character_Dude_WallSliding0
+    21300100: Character_Dude_Jumping0
+    21300102: Character_Dude_Falling0
+    21300104: Character_Dude_Falling1
+    21300106: Character_Dude_Falling2
+    21300108: Character_Dude_Falling3
+    21300110: Character_Dude_Ragdoll_Head
+    21300112: Character_Dude_Ragdoll_Torso
+    21300114: Character_Dude_Ragdoll_Waist
+    21300116: Character_Dude_Ragdoll_ArmL0
+    21300118: Character_Dude_Ragdoll_ArmL1
+    21300120: Character_Dude_Ragdoll_ArmR0
+    21300122: Character_Dude_Ragdoll_ArmR1
+    21300124: Character_Dude_Ragdoll_LegL0
+    21300126: Character_Dude_Ragdoll_LegL1
+    21300128: Character_Dude_Ragdoll_LegR0
+    21300130: Character_Dude_Ragdoll_LegR1
+    21300132: Character_Skeleton_Standing0
+    21300134: Character_Skeleton_Standing1
+    21300136: Character_Skeleton_Standing2
+    21300138: Character_Skeleton_Standing3
+    21300140: Character_Skeleton_Walking0
+    21300142: Character_Skeleton_Walking1
+    21300144: Character_Skeleton_Walking2
+    21300146: Character_Skeleton_Walking3
+    21300148: Character_Skeleton_Walking4
+    21300150: Character_Skeleton_Walking5
+    21300152: Character_Skeleton_Walking6
+    21300154: Character_Skeleton_Walking7
+    21300156: Character_Skeleton_Walking8
+    21300158: Character_Skeleton_Walking9
+    21300160: Character_Skeleton_Walking10
+    21300162: Character_Skeleton_Walking11
+    21300164: Character_Skeleton_WallSliding0
+    21300166: Character_Skeleton_Jumping0
+    21300168: Character_Skeleton_Falling0
+    21300170: Character_Skeleton_Falling1
+    21300172: Character_Skeleton_Falling2
+    21300174: Character_Skeleton_Falling3
+    21300176: Character_Skeleton_Ragdoll_Head
+    21300178: Character_Skeleton_Ragdoll_Torso
+    21300180: Character_Skeleton_Ragdoll_Waist
+    21300182: Character_Skeleton_Ragdoll_ArmL0
+    21300184: Character_Skeleton_Ragdoll_ArmL1
+    21300186: Character_Skeleton_Ragdoll_ArmR0
+    21300188: Character_Skeleton_Ragdoll_ArmR1
+    21300190: Character_Skeleton_Ragdoll_LegL0
+    21300192: Character_Skeleton_Ragdoll_LegL1
+    21300194: Character_Skeleton_Ragdoll_LegR0
+    21300196: Character_Skeleton_Ragdoll_LegR1
+    21300198: Character_Spelunker_Standing0
+    21300200: Character_Spelunker_Standing1
+    21300202: Character_Spelunker_Standing2
+    21300204: Character_Spelunker_Standing3
+    21300206: Character_Spelunker_Walking0
+    21300208: Character_Spelunker_Walking1
+    21300210: Character_Spelunker_Walking2
+    21300212: Character_Spelunker_Walking3
+    21300214: Character_Spelunker_Walking4
+    21300216: Character_Spelunker_Walking5
+    21300218: Character_Spelunker_Walking6
+    21300220: Character_Spelunker_Walking7
+    21300222: Character_Spelunker_Walking8
+    21300224: Character_Spelunker_Walking9
+    21300226: Character_Spelunker_Walking10
+    21300228: Character_Spelunker_Walking11
+    21300230: Character_Spelunker_WallSliding0
+    21300232: Character_Spelunker_Jumping0
+    21300234: Character_Spelunker_Falling0
+    21300236: Character_Spelunker_Falling1
+    21300238: Character_Spelunker_Falling2
+    21300240: Character_Spelunker_Falling3
+    21300242: Character_Plumber_Standing0
+    21300244: Character_Plumber_Standing1
+    21300246: Character_Plumber_Standing2
+    21300248: Character_Plumber_Standing3
+    21300250: Character_Plumber_Walking0
+    21300252: Character_Plumber_Walking1
+    21300254: Character_Plumber_Walking2
+    21300256: Character_Plumber_Walking3
+    21300258: Character_Plumber_Walking4
+    21300260: Character_Plumber_Walking5
+    21300262: Character_Plumber_Walking6
+    21300264: Character_Plumber_Walking7
+    21300266: Character_Plumber_Walking8
+    21300268: Character_Plumber_Walking9
+    21300270: Character_Plumber_Walking10
+    21300272: Character_Plumber_Walking11
+    21300274: Character_Plumber_WallSliding0
+    21300276: Character_Plumber_Jumping0
+    21300278: Character_Plumber_Falling0
+    21300280: Character_Plumber_Falling1
+    21300282: Character_Plumber_Falling2
+    21300284: Character_Plumber_Falling3
   externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 6
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -44,6 +164,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -54,7 +176,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -105,11 +227,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character_Player_Standing0
+      name: Character_Dev_Standing0
       rect:
         serializedVersion: 2
         x: 2
-        y: 241
+        y: 497
         width: 13
         height: 13
       alignment: 0
@@ -125,11 +247,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Walking0
+      name: Character_Dev_Walking0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 241
+        x: 58
+        y: 497
         width: 13
         height: 13
       alignment: 0
@@ -145,111 +267,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Walking1
+      name: Character_Dev_WallSliding0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 241
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f46e6904cf0425448ab8739ab5104992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character_Player_Walking2
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 241
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a682e4978bbc5884c8a0b90175707962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character_Player_Walking3
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 241
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b7a929c0dc7ecb4f9d0ae108dddb673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character_Player_Walking4
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 241
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1978ca85fc54aa4899abbc3c01b1713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character_Player_Walking5
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 241
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3e68566d0de6b149b1bda25d20eaacb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character_Player_WallSliding0
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 241
+        x: 226
+        y: 497
         width: 13
         height: 13
       alignment: 0
@@ -265,11 +287,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Jumping0
+      name: Character_Dev_Jumping0
       rect:
         serializedVersion: 2
-        x: 114
-        y: 241
+        x: 240
+        y: 497
         width: 13
         height: 13
       alignment: 0
@@ -285,11 +307,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Falling0
+      name: Character_Dev_Falling0
       rect:
         serializedVersion: 2
-        x: 128
-        y: 241
+        x: 254
+        y: 497
         width: 13
         height: 13
       alignment: 0
@@ -305,11 +327,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Falling1
+      name: Character_Dev_Falling1
       rect:
         serializedVersion: 2
-        x: 142
-        y: 241
+        x: 268
+        y: 497
         width: 13
         height: 13
       alignment: 0
@@ -325,11 +347,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Falling2
+      name: Character_Dev_Falling2
       rect:
         serializedVersion: 2
-        x: 156
-        y: 241
+        x: 282
+        y: 497
         width: 13
         height: 13
       alignment: 0
@@ -345,11 +367,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_Head
+      name: Character_Dev_Ragdoll_Head
       rect:
         serializedVersion: 2
-        x: 172
-        y: 250
+        x: 312
+        y: 506
         width: 2
         height: 2
       alignment: 7
@@ -365,11 +387,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_Torso
+      name: Character_Dev_Ragdoll_Torso
       rect:
         serializedVersion: 2
-        x: 176
-        y: 249
+        x: 316
+        y: 505
         width: 3
         height: 3
       alignment: 0
@@ -385,11 +407,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_Waist
+      name: Character_Dev_Ragdoll_Waist
       rect:
         serializedVersion: 2
-        x: 176
-        y: 244
+        x: 316
+        y: 500
         width: 3
         height: 3
       alignment: 9
@@ -405,11 +427,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_ArmL0
+      name: Character_Dev_Ragdoll_ArmL0
       rect:
         serializedVersion: 2
-        x: 181
-        y: 250
+        x: 321
+        y: 506
         width: 1
         height: 2
       alignment: 9
@@ -425,11 +447,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_ArmL1
+      name: Character_Dev_Ragdoll_ArmL1
       rect:
         serializedVersion: 2
-        x: 181
-        y: 247
+        x: 321
+        y: 503
         width: 1
         height: 2
       alignment: 2
@@ -445,11 +467,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_ArmR0
+      name: Character_Dev_Ragdoll_ArmR0
       rect:
         serializedVersion: 2
-        x: 184
-        y: 250
+        x: 324
+        y: 506
         width: 1
         height: 2
       alignment: 9
@@ -465,11 +487,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_ArmR1
+      name: Character_Dev_Ragdoll_ArmR1
       rect:
         serializedVersion: 2
-        x: 184
-        y: 247
+        x: 324
+        y: 503
         width: 1
         height: 2
       alignment: 9
@@ -485,11 +507,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_LegL0
+      name: Character_Dev_Ragdoll_LegL0
       rect:
         serializedVersion: 2
-        x: 187
-        y: 250
+        x: 327
+        y: 506
         width: 1
         height: 2
       alignment: 9
@@ -505,11 +527,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_LegL1
+      name: Character_Dev_Ragdoll_LegL1
       rect:
         serializedVersion: 2
-        x: 187
-        y: 247
+        x: 327
+        y: 503
         width: 1
         height: 2
       alignment: 2
@@ -525,11 +547,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_LegR0
+      name: Character_Dev_Ragdoll_LegR0
       rect:
         serializedVersion: 2
-        x: 190
-        y: 250
+        x: 330
+        y: 506
         width: 1
         height: 2
       alignment: 9
@@ -545,11 +567,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Player_Ragdoll_LegR1
+      name: Character_Dev_Ragdoll_LegR1
       rect:
         serializedVersion: 2
-        x: 190
-        y: 247
+        x: 330
+        y: 503
         width: 1
         height: 2
       alignment: 2
@@ -560,6 +582,2506 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 963025c1f4e41884bb97cb1e91e393e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Standing1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e487554f2b25f4f43bc513825ed332fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Standing2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f2f231beb5013478fed27aa7780d76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Standing3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813e1e6b9752acc4ab2d8b797fc0094a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faec52fdc108dce4ab2a75ce8dea6b91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c59eef2dce0045499b90b415e10b68e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d8df7c54f8b9545a8d759a6d899d59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e3edaf4a2687d4db5521f5fa9c2562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54f2f5078a77634cb3a5b873dbbb236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f04bc84ef3c3da40a9dc806f26e1b4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking7
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe410f528f2a9346a1462dccf72181d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b514d95fc2628e4291799b81d0a6e41
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking9
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c788792c11b62418c729ab69658cb5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c703c3f0101e0a34c9a83e459c44fd01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Walking11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60810f473fdfe994ea239b5361f2f9d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dev_Falling3
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 497
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31da9c9c09b28d498d819a309ec5300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Standing0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1410b948c3a50468cfe773600b20aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Standing1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8ab79e57513044abd8ba4cb734c38e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Standing2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192b8720044375840ac2a213e6343366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Standing3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6577bad6813f507498501fc941cf27b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aaf534ca38b18844b0284741179a67a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c072a9c2dfc2fe4990080f4d4e3faa3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5beae210789920840bd442e278c5018b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf5a77a8116ec74fbb82610494c0310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd096780483f914399d86077bb5fc56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770b8de8ff7612c4aaa68c56eb37378d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51e2f6461d080643b86b61d7c24daf1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking7
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b09911d4d315fa479075205cb6bec53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32f0fa2cb0be96449e7eb31c3a055cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking9
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d969b40c3071f3d4f84563431273335a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d74f6cbcf3604d4da441eb6b863f426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Walking11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87aa78600b4370c44b04c6c041954749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_WallSliding0
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06ee498c6b63b843806644f674bc2f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Jumping0
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b470f36c8ba3dab4193db161362e42d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Falling0
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e08d6ee5581294297a59af75eaad4a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Falling1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0620394adca85d4783dd3a3e4988524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Falling2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012fe03e580aaf44ab27212dc1ba529c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Falling3
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 483
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb68a09e7bcbf474d99aa235da14b384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_Head
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 492
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f46515ec10615469cc5a037017be53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_Torso
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 491
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d112ac0a74278e4fb6f1bb999b11131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_Waist
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 486
+        width: 3
+        height: 3
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a5180bc9aa9bd4cb4a9c78719c6de3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_ArmL0
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 492
+        width: 1
+        height: 2
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bef4bf5929dbe468e1ddb3fe2771d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_ArmL1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 489
+        width: 1
+        height: 2
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473a3acc04a8a4b4195202eb69a0475f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_ArmR0
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 492
+        width: 1
+        height: 2
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d89aa9f0911e6a4a874a25025a11651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_ArmR1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 489
+        width: 1
+        height: 2
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03768668fa88c0a44be6ded534c1b707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_LegL0
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 492
+        width: 1
+        height: 2
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c673538eb8b777843918948cd0a9a6ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_LegL1
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 489
+        width: 1
+        height: 2
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49a33d953963134d8ea1328baa9b7cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_LegR0
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 492
+        width: 1
+        height: 2
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019bc4c8dd1fd3643a0de435a839ec8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Dude_Ragdoll_LegR1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 489
+        width: 1
+        height: 2
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be74c32e3b7fda449a384b2baf8f525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Standing0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c16418719385ee4197b07224ffe978b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Standing1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2542affb1cacff42af66510abb47398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Standing2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17f076ca6f4da04494b5ae39214b40a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Standing3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c56d3b7f7133f64d903dbb218c6b7ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8026353803427ca45b63bfd567266a54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876e4f5fbde9f9d4cb7e5e30e46740cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71fb3febb6e6b142891a07a4f9fbd4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8726e53b06b9f3f46a473add3c1deaec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d648c2598c6ea469bd654f74fb464b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3420011dfe7d5c74485256c820f61793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90eacfffda81e7d45936b4a496c08fcb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking7
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1027851b98508c2439d9f8efd79abfe2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b44ce86105a2434e952137e8bb9885c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking9
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31c471aa40e59742b53bfb559a14f5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33fa8e9d21a4b043a49f1ccd7ed0c01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Walking11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c5f836141194c40b86681d58717577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_WallSliding0
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a519d3d05d14045bcd0d5d1aedd38c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Jumping0
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3ee881c71c71c43a38164fd05eeb71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Falling0
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a650f1cbf652e4c93bce8dcae4e84d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Falling1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98d7fde390378f498a2ea098de277a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Falling2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7510ccec90f9043a17895449273e41
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Falling3
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8abd27a063ed142aeb533164c02263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_Head
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 478
+        width: 2
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ae1d3ee82ed244d9f63be212c860ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_Torso
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 477
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e975fd8c09559a14683ecd57996b9851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_Waist
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 472
+        width: 3
+        height: 3
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0888ff67335fd4bb18e7b818b20c60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_ArmL0
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 478
+        width: 1
+        height: 2
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ca0fab573c6d945a36debadeb43f37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_ArmL1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 475
+        width: 1
+        height: 2
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e9254ac8d1ea345b91803c27931501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_ArmR0
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 478
+        width: 1
+        height: 2
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf8d57bb0071fc4f9ac4f5081f8ff2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_ArmR1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 475
+        width: 1
+        height: 2
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b530e340b9a1d5447ace0ec41cdf1595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_LegL0
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 478
+        width: 1
+        height: 2
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11584dc3014e8d944a0e2dba25b7ee73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_LegL1
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 475
+        width: 1
+        height: 2
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ed8d85052d99b42986dd03bcd0ffb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_LegR0
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 478
+        width: 1
+        height: 2
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6ca4b715a078f48b00c7c463b27011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Skeleton_Ragdoll_LegR1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 475
+        width: 1
+        height: 2
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7da1b04e1dd2047ba26fc105efc215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Standing0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e684dbec8614bdd40a4806ad630ba29e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Standing1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9fbf40805824b43b248264e5047722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Standing2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51f612956eafd645ac431a297fe0218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Standing3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081ae4af339fffa4399e7c5cdb48337d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0c248e4b87e9848aa6c9bd9f9cd91c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b393fc354838e92469c06b9cf50cd1b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2cba295560b6a469979278896960f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de932390f6eed8d47ba35ede61d96050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583e9833aa3fa41409e6423b38a741e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0072415ab93bb614b996461a4ca9ae4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4d22363b66d454ca8686f6b877adce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking7
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c6375db2176b14cb1b6b8fe662a246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a767e0fc88c820d4a9fe9062a9de1fa1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking9
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f9dd77cef717d419b5d16cf4723021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07f7541ec64667438dd862f0350e5dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Walking11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292e310bc01a1024fbae8d39b34472b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_WallSliding0
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9697fd301bdf321408ba917bb0d1672c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Jumping0
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202b974dedcc28748a49a9aff1fcd0cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Falling0
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6600798f4687d354a863d2183de1c86b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Falling1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c97e3f51eeab894a93d00ff0cc2be15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Falling2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72dd874e5ed71f74f90b3809b1f32a95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Spelunker_Falling3
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 455
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ce5ff69359cbb4e8168f879cfe5e1c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Standing0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d668ed57ef86e418e8c4c344613aa3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Standing1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d271d7852ba66949a5898c566c8cd69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Standing2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bf2e3c4cc498f429a23522d1ba7a8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Standing3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfdb8a9232a1c5442a4c6ab89bf9be0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774fa4c5699c36244ad1645cee7b5e03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae695abf9a693384d9ba1f1d786430eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc27814c78a9604eb819c79bbccdf24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e490fa523ba4e9747aa84d0ee64e07c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1196c3920abd2764cbf0019cd799f33f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3962d30b818cb64a973718bf4f0df04
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f5007d02452e243adb90d663f13a6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking7
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3c680375cfa804cb23dc22bb7c118f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f149d49c0a0b54a96695f2baed29db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking9
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a1e68b5cc804b4a87580182eba8e9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7546b8a201e1dcd4fb931e686fbc9d9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Walking11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5d7411f09d9474d8ca1e7a6c9b05a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_WallSliding0
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7281491e123094b9241c811004a88f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Jumping0
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e7d82c2d8c4994ea200277cfc17c92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Falling0
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22c821b14f62cc4c98d22a841ada857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Falling1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26818ac7cf117f46be333b2585777dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Falling2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f0704878e1bb34d8758092cc5e01cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Plumber_Falling3
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 441
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9d307bd307d5c41957007861907d0c
       vertices: []
       indices: 
       edges: []

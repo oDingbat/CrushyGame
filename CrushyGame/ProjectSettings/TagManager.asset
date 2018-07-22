@@ -53,3 +53,6 @@ TagManager:
   - name: Teeth
     uniqueID: 3926046169
     locked: 0
+  - name: Projectiles
+    uniqueID: 1909202749
+    locked: 0

@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 114593757385508676}
   - component: {fileID: 114621878577590896}
   m_Layer: 11
-  m_Name: Ragdoll (Player)
+  m_Name: Ragdoll (Plumber)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -418,7 +418,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -438,7 +438,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -458,7 +458,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -478,7 +478,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -498,7 +498,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -518,7 +518,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -538,7 +538,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -558,7 +558,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -578,7 +578,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -598,7 +598,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -618,7 +618,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: be1e97048f54cb641adca01b7ed73767, type: 2}
+  m_Material: {fileID: 6200000, guid: 42e2536cc8de3524e8c5b6a19606e2c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -827,7 +827,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.25, y: 0.25}
     newSize: {x: 0.25, y: 0.25}
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createRagdoll: 0
-  ragdollName: Player
+  ragdollName: Plumber
 --- !u!114 &114621878577590896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -950,7 +950,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300024, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300110, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -996,7 +996,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300036, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300122, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1042,7 +1042,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300032, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300118, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1088,7 +1088,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300034, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300120, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1134,7 +1134,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300026, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300112, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1180,7 +1180,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300040, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300126, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1226,7 +1226,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300030, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300116, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1272,7 +1272,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300042, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300128, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1318,7 +1318,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300038, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300124, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1364,7 +1364,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300028, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300114, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1410,7 +1410,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 750
-  m_Sprite: {fileID: 21300044, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
+  m_Sprite: {fileID: 21300130, guid: cf52c6a99f2e9c44cad4044e3b2d411f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1431,8 +1431,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50279608784557278}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.000000014901159, y: -0.125}
@@ -1454,8 +1454,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50083816610819546}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.000000014901159, y: -0.125}
@@ -1477,8 +1477,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50590403614381776}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.0830002, y: -0.20800018}
@@ -1500,8 +1500,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50881775019680144}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0.125}
@@ -1523,8 +1523,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50701014977238952}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: -0.12400007}
@@ -1546,8 +1546,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50881775019680144}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: -0.125}
@@ -1569,8 +1569,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50590403614381776}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -0.08300017, y: -0.20800018}
@@ -1592,8 +1592,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50881775019680144}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.16600037, y: 0.08300018}
@@ -1615,8 +1615,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50300090901892036}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: -0.12400007}
@@ -1638,8 +1638,8 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50881775019680144}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 1000
+  m_BreakTorque: 1000
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -0.16600037, y: 0.08300018}

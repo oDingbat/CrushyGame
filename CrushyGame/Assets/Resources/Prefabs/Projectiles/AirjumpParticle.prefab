@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1050112604537098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.16, y: 0.69, z: 1}
+  m_LocalPosition: {x: 4.16, y: 0.69, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,9 +74,9 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1909202749
+  m_SortingLayer: 2
+  m_SortingOrder: 32767
   m_Time: 0.075
   m_Parameters:
     serializedVersion: 2
@@ -145,7 +145,7 @@ TrailRenderer:
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 0
+    alignment: 1
     textureMode: 0
     generateLightingData: 0
   m_MinVertexDistance: 0.01
@@ -170,3 +170,4 @@ MonoBehaviour:
   bounciness: 0.5
   ricochetCount: 50
   lifespan: 1
+  useCollision: 1

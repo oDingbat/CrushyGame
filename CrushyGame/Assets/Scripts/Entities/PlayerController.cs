@@ -25,6 +25,7 @@ public class PlayerController : Entity {
 	public GameManager gameManager;
 	public MonsterController monster;
 	public AudioManager audioManager;
+	public Transform[] touchButtons;
 
 	[Space (10)][Header ("Attributes")]
 	public Attributes attributesBase;
@@ -86,7 +87,7 @@ public class PlayerController : Entity {
 
 	// Events
 	public event Action<PlayerController> EventChangeCharacter;
-	public event Action<int, bool> EventLostHeart;
+	public event Action<int> EventLostHeart;
 
 	private void Start () {
 		// Setup references
@@ -142,25 +143,48 @@ public class PlayerController : Entity {
 			// Movement
 			List<Touch> touches = Input.touches.ToList();
 			Vector2 screenRes = new Vector2(Screen.width, Screen.height);
+			List<Transform> touchedButtons = new List<Transform>();
 
-			bool left = Input.GetKey(controlScheme.left) || Input.GetKey(controlScheme.leftAlt) || (Input.GetAxis("G_Horizontal") < -0.01f ? true : false) || touches.Exists(t => t.position.x < screenRes.x * 0.25f);
-			bool right = Input.GetKey(controlScheme.right) || Input.GetKey(controlScheme.rightAlt) || (Input.GetAxis("G_Horizontal") > 0.01f ? true : false) || touches.Exists(t => t.position.x > screenRes.x * 0.25f && t.position.x < screenRes.x * 0.5f);
+			// Get touch buttons
+			foreach (Touch t in touches) {
+				Transform touchedButton = null;
+				float closestDistance = Mathf.Infinity;
+
+				Vector2 tPos = camera.ScreenToWorldPoint(t.position);
+
+				// See if touch t is touching any buttons
+				foreach (Transform b in touchButtons) {
+					float currentDist = Vector2.Distance(tPos, b.position);
+					if (currentDist < 2f && currentDist < closestDistance) {
+						touchedButton = b;
+						closestDistance = currentDist;
+					}
+				}
+
+				// If we touched a button, add it to the list
+				if (touchedButton != null && touchedButtons.Contains(touchedButton) == false) {
+					touchedButtons.Add(touchedButton);
+				}
+			}
+
+			bool left = Input.GetKey(controlScheme.left) || Input.GetKey(controlScheme.leftAlt) || (Input.GetAxis("G_Horizontal") < -0.01f ? true : false) || touchedButtons.Exists(b => b.name == "(Arrow Left)");
+			bool right = Input.GetKey(controlScheme.right) || Input.GetKey(controlScheme.rightAlt) || (Input.GetAxis("G_Horizontal") > 0.01f ? true : false) || touchedButtons.Exists(b => b.name == "(Arrow Right)");
 
 			inputMovement = (left != right) ? (left ? -1 : 1) : 0;
 
 			// Jumping
-			bool jump = Input.GetKeyDown(controlScheme.jump) || Input.GetKeyDown(controlScheme.jumpAlt) || Input.GetButtonDown("G_Jump") ? true : false || touches.Exists(t => t.position.x > screenRes.x * 0.75f && t.phase == TouchPhase.Began);
+			bool jump = Input.GetKeyDown(controlScheme.jump) || Input.GetKeyDown(controlScheme.jumpAlt) || Input.GetButtonDown("G_Jump") ? true : false || touchedButtons.Exists(b => b.name == "(Arrow Up)");
 			if (jump) {
 				timeLastPressedJump = Time.time;
 			}
 
 			// Platform Dropping
-			bool down = Input.GetKeyDown(controlScheme.down) || Input.GetKeyDown(controlScheme.downAlt) || (Input.GetAxis("G_Vertical") < -0.01f ? true : false);
+			bool down = Input.GetKeyDown(controlScheme.down) || Input.GetKeyDown(controlScheme.downAlt) || (Input.GetAxis("G_Vertical") < -0.01f ? true : false) || touchedButtons.Exists(b => b.name == "(Arrow Down)");
 			if (down) {
 				AttemptDropDown();
 			}
 
-			if (jump && attributesCombined.hearts <= 0 && attributesCombined.cursedHearts <= 0) {
+			if (jump && attributesCombined.hearts <= 0) {
 				SceneManager.LoadScene(0);
 			}
 		}
@@ -450,18 +474,23 @@ public class PlayerController : Entity {
 
 	private void UpdateAnimator () {
 		string characterName = spriteAnimator.runtimeAnimatorController.name;
+		Debug.Log(characterName);
 
 		if (spriteAnimator.enabled == true) {
 			if (grounded == true) {
 				if (touchingWall == true) {
+					spriteAnimator.speed = 1;
 					spriteAnimator.transform.localScale = new Vector3(Mathf.Sign(-touchingWallDirection), 1, 1);
 				} else {
+					spriteAnimator.speed = 1;
 					spriteAnimator.transform.localScale = new Vector3(Mathf.Sign(velocity.x), 1, 1);
 				}
-				spriteAnimator.speed = Mathf.Abs(velocity.x) / 10 * 1.25f;
+				
 				if (Mathf.Abs(velocity.x) < 0.125f) {
+					spriteAnimator.speed = 1;
 					spriteAnimator.Play(characterName + "_Standing");
 				} else {
+					spriteAnimator.speed = Mathf.Abs(velocity.x) / 10 * 2.5f;
 					spriteAnimator.Play(characterName + "_Walking");
 				}
 			} else {
@@ -471,7 +500,7 @@ public class PlayerController : Entity {
 					spriteAnimator.Play(characterName + "_WallSliding");
 				} else {
 					spriteAnimator.transform.localScale = new Vector3(Mathf.Sign(velocity.x), 1, 1);
-					if (velocity.y > 0.125f) {
+					if (velocity.y > 0.25f) {
 						spriteAnimator.Play(characterName + "_Jumping");
 					} else {
 						spriteAnimator.Play(characterName + "_Falling");
@@ -512,15 +541,11 @@ public class PlayerController : Entity {
 
 		// Send out event for losing hearts
 		if (EventLostHeart != null) {
-			EventLostHeart(attributesCombined.cursedHearts > 0 ? attributesCombined.cursedHearts - 1 : attributesCombined.hearts - 1, attributesCombined.cursedHearts > 0 ? true : false);
+			EventLostHeart(attributesCombined.hearts - 1);
 		}
 
 		// Remove one heart
-		if (attributesCombined.cursedHearts > 0) {
-			attributesCombined.cursedHearts--;
-		} else {
-			attributesCombined.hearts--;
-		}
+		attributesCombined.hearts--;
 
 		// Create ragdoll
 		GameObject prefabRagdoll = Resources.Load<GameObject>("Prefabs/Ragdolls/Ragdoll (" + spriteAnimator.runtimeAnimatorController.name + ")");
@@ -540,7 +565,7 @@ public class PlayerController : Entity {
 		audioManager.PlayClipAtPoint(clip_die, transform.position, 1f, 1f);
 
 		// If the player still has some hearts, revive them after a set delay
-		if (attributesCombined.hearts > 0 || attributesCombined.cursedHearts > 0) {
+		if (attributesCombined.hearts > 0) {
 			StartCoroutine(DelayedRevival());
 		}
 	}
@@ -557,7 +582,7 @@ public class PlayerController : Entity {
 		Destroy(corpse);
 
 		// Position player
-		transform.position = monster.teeth[monster.currentGap + monster.teethCount].position + new Vector3(0, 1f, 0);
+		transform.position = monster.teeth[monster.currentGap + monster.teethCount].position + new Vector3(0, 1.125f, 0);
 
 		Revive();		// Revive the player
 	}

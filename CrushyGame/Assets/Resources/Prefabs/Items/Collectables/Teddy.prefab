@@ -106,7 +106,6 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Teddy
-    color: {r: 0.627451, g: 0.35686275, b: 0.3254902, a: 1}
     animController: {fileID: 9100000, guid: f6b5ecb69ddc8ee41b49299557cdab41, type: 2}
     attributes:
       speed: 0
@@ -117,9 +116,7 @@ MonoBehaviour:
       weight: 0
       airJumps: 0
       luck: 0
-      hearts: 100
-      heartsMax: 0
-      cursedHearts: 0
+      hearts: 1
       climbing: 0
     isCollectable: 1
   coinValue: 0

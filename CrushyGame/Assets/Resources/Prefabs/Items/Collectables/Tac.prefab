@@ -106,20 +106,17 @@ MonoBehaviour:
     m_Bits: 33024
   item:
     name: Tac
-    color: {r: 0.48627454, g: 0.19215688, b: 0.38823533, a: 1}
     animController: {fileID: 9100000, guid: c8ad9f7da8cf3bc4c980e442c8db5e8c, type: 2}
     attributes:
-      speed: 0
-      acceleration: 0
-      deceleration: 0
+      speed: 1
+      acceleration: 1
+      deceleration: 1
       jumpHeight: 0
       magnetism: 0
       weight: 0
       airJumps: 0
       luck: 0
-      hearts: 0
-      heartsMax: 0
-      cursedHearts: 1
+      hearts: 1
       climbing: 0
     isCollectable: 1
   coinValue: 0

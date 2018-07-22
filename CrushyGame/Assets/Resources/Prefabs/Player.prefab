@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 50878027462782340}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.083333336}
+  m_Offset: {x: 0, y: -0.16666667}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -282,7 +282,7 @@ Animator:
   m_GameObject: {fileID: 1598324767617224}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 72aa630cd560d8049a73de1be1276234, type: 2}
+  m_Controller: {fileID: 9100000, guid: 58a06f67d5647e64190f6b9524d8c6d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -329,6 +329,8 @@ MonoBehaviour:
     suicideAlt: 0
     characterSwap: 0
     characterSwapAlt: 0
+    pause: 0
+    pauseAlt: 0
   controlSchemePreset: 1
   camera: {fileID: 0}
   collider: {fileID: 0}
@@ -339,7 +341,7 @@ MonoBehaviour:
   monster: {fileID: 0}
   audioManager: {fileID: 0}
   attributesBase:
-    speed: 8
+    speed: 7
     acceleration: 10
     deceleration: 10
     jumpHeight: 10
@@ -347,9 +349,7 @@ MonoBehaviour:
     weight: 10
     airJumps: 0
     luck: 0
-    hearts: 3
-    heartsMax: 3
-    cursedHearts: 0
+    hearts: 1
     climbing: 4
   attributesCombined:
     speed: 0
@@ -361,8 +361,6 @@ MonoBehaviour:
     airJumps: 0
     luck: 0
     hearts: 0
-    heartsMax: 0
-    cursedHearts: 0
     climbing: 0
   corpse: {fileID: 0}
   clip_footstep: {fileID: 8300000, guid: 51bd49cac2ed3034d8297707687b04ae, type: 3}
@@ -403,6 +401,7 @@ MonoBehaviour:
   textContainer: {fileID: 4273813944387082}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   borderColor: {r: 0.14117648, g: 0.07450981, b: 0.07450981, a: 1}
+  textCount: 0
   text: wishbone
   textAlignment: 1
   textSortingOrder: 2000

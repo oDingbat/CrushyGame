@@ -16,7 +16,7 @@ public class RagdollWizard : MonoBehaviour {
 			transform.name = "Ragdoll (" + ragdollName + ")";
 
 			// Load ragdoll sprites
-			Sprite[] characterSpreadsheetSprites = Resources.LoadAll<Sprite>("Art/CharacterSpreadsheet");
+			Sprite[] characterSpreadsheetSprites = Resources.LoadAll<Sprite>("Art/Characters/CharacterSpreadsheet");
 
 			foreach (Transform ragdollPiece in transform) {
 				string pieceName = ("Character_" + ragdollName + "_" + ragdollPiece.name);

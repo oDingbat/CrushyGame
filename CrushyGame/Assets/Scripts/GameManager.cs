@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour {
 	public GameObject prefab_textFloater;
 	public GameObject prefab_ItemImage;
 	public GameObject prefab_HeartImage;
-	public GameObject prefab_CursedHeartImage;
 
 	private void Start () {
 		monster.EventPlayerLived += OnPlayerLived;
@@ -42,8 +41,7 @@ public class GameManager : MonoBehaviour {
 		UI_coins.SetText(coins.ToString());
 
 		// Create hearts
-		CreateHeartImages(player.attributesBase.heartsMax, false);
-		CreateHeartImages(player.attributesBase.cursedHearts, true);
+		CreateHeartImages(player.attributesBase.hearts);
 	}
 
 	private void Update() {
@@ -73,7 +71,7 @@ public class GameManager : MonoBehaviour {
 	private void PositionUIContainers () {
 		float verticalOffset = Mathf.Clamp((monster.mouthWidth - 6f) / 2, 0, 10);
 		heartCollectionContainer.localPosition = new Vector3(heartCollectionContainer.localPosition.x, 1.96f + verticalOffset);
-		itemCollectionContainer.localPosition = new Vector3(heartCollectionContainer.localPosition.x, 1.96f + verticalOffset);
+		itemCollectionContainer.localPosition = new Vector3(itemCollectionContainer.localPosition.x, 1.96f + verticalOffset);
 	}
 
 	public void OnCoinGrabbed (int value) {
@@ -92,8 +90,8 @@ public class GameManager : MonoBehaviour {
 		}
 
 		// Create hearts
-		CreateHeartImages(item.attributes.heartsMax, false);
-		CreateHeartImages(item.attributes.cursedHearts, true);
+		int heartsAdded = Mathf.Clamp(item.attributes.hearts, 0, 5 - player.attributesCombined.hearts);
+		CreateHeartImages(heartsAdded);
 		
 		// Add Attributes
 		player.attributesCombined.Add(item.attributes);
@@ -115,13 +113,13 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	public void CreateHeartImages (int amount, bool isCursed) {
-		// Create heartSockets for heart Maximums
+	public void CreateHeartImages (int amount) {
+		// Create heart images
 		for (int i = 0; i < amount; i++) {
 			// Create single heart socket
-			HeartImage newHeartSocketImage = Instantiate((isCursed  ? prefab_CursedHeartImage : prefab_HeartImage), Vector3.zero, Quaternion.identity, heartCollectionContainer).GetComponent<HeartImage>();
+			HeartImage newHeartSocketImage = Instantiate(prefab_HeartImage, Vector3.zero, Quaternion.identity, heartCollectionContainer).GetComponent<HeartImage>();
 			newHeartSocketImage.transform.localPosition = new Vector3(-3, -0.75f * heartImages.Count);
-			newHeartSocketImage.heartIndex = (isCursed == true ? player.attributesCombined.cursedHearts + i : player.attributesCombined.heartsMax + i);
+			newHeartSocketImage.heartIndex = heartImages.Count;
 			newHeartSocketImage.player = player;
 			heartImages.Add(newHeartSocketImage);
 		}

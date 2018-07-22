@@ -15,8 +15,6 @@ public class Attributes {
 	public int airJumps;
 	public int luck;
 	public int hearts;
-	public int heartsMax;
-	public int cursedHearts;
 	public int climbing;
 
 	public Attributes () {
@@ -29,8 +27,6 @@ public class Attributes {
 		airJumps = 0;
 		luck = 0;
 		hearts = 0;
-		heartsMax = 0;
-		cursedHearts = 0;
 		climbing = 0;
 	}
 
@@ -44,8 +40,6 @@ public class Attributes {
 		airJumps = copiedAttribute.airJumps;
 		luck = copiedAttribute.luck;
 		hearts = copiedAttribute.hearts;
-		heartsMax = copiedAttribute.heartsMax;
-		cursedHearts = copiedAttribute.cursedHearts;
 		climbing = copiedAttribute.climbing;
 
 		ClampValues();
@@ -61,8 +55,6 @@ public class Attributes {
 		airJumps += attributesAdded.airJumps;
 		luck += attributesAdded.luck;
 		hearts += attributesAdded.hearts;
-		heartsMax += attributesAdded.heartsMax;
-		cursedHearts += attributesAdded.cursedHearts;
 		climbing += attributesAdded.climbing;
 	}
 
@@ -76,8 +68,6 @@ public class Attributes {
 		airJumps -= attributesSubtracted.airJumps;
 		luck -= attributesSubtracted.luck;
 		hearts -= attributesSubtracted.hearts;
-		heartsMax -= attributesSubtracted.heartsMax;
-		cursedHearts -= attributesSubtracted.cursedHearts;
 		climbing -= attributesSubtracted.climbing;
 	}
 
@@ -86,9 +76,7 @@ public class Attributes {
 		acceleration = (int)Mathf.Clamp(acceleration, 1f, Mathf.Infinity);
 		deceleration = (int)Mathf.Clamp(deceleration, 0f, Mathf.Infinity);
 		jumpHeight = (int)Mathf.Clamp(jumpHeight, 1f, Mathf.Infinity);
-		hearts = (int)Mathf.Clamp(hearts, 0, heartsMax);
-		heartsMax = (int)Mathf.Clamp(heartsMax, 1, 10);
-		cursedHearts = (int)Mathf.Clamp(cursedHearts, 0, 10 - heartsMax);
+		hearts = (int)Mathf.Clamp(hearts, 0, 5);
 	}
 
 	public static Attributes Combine(List<Attributes> attributesList) {

@@ -116,9 +116,7 @@ MonoBehaviour:
       weight: 0
       airJumps: 0
       luck: 0
-      hearts: 0
-      heartsMax: 0
-      cursedHearts: 2
+      hearts: 1
       climbing: 0
     isCollectable: 1
   coinValue: 0

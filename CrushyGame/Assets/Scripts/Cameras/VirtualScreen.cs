@@ -7,7 +7,7 @@ public class VirtualScreen : MonoBehaviour {
 	public Camera virtualCamera;
 
 	float gameHeight = 180;
-	float gameWidth = 360;
+	float gameWidth = 320;
 
 	public void Update () {
 		virtualCamera.orthographicSize = Screen.height / 2;
